@@ -3,7 +3,7 @@ import Counter from "../islands/Counter.tsx";
 import BeakerIcon from "@heroicons/24/solid/BeakerIcon.js";
 import { pattern } from "https://deno.land/x/fresh_tailwind@v0.3.0/hero.ts";
 import TabsPanel from "../components/Tabs.tsx";
-import Progress from "../components/Progress.tsx";
+import { Progress } from "../components/Progress.tsx";
 import TabExample from "../islands/TabExample.tsx";
 
 const dotPattern =
