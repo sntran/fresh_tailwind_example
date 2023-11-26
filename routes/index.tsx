@@ -3,6 +3,7 @@ import Counter from "../islands/Counter.tsx";
 import BeakerIcon from "@heroicons/24/solid/BeakerIcon.js";
 import { pattern } from "https://deno.land/x/fresh_tailwind@v0.3.0/hero.ts";
 import TabsPanel from "../components/Tabs.tsx";
+import Progress from "../components/Progress.tsx";
 import TabExample from "../islands/TabExample.tsx";
 
 const dotPattern =
@@ -34,6 +35,8 @@ export default function Home() {
             <code class="mx-2">./routes/index.tsx</code> file, and refresh.
           </p>
           <Counter count={count} />
+
+          <Progress value="5" max="10" />
         </div>
       </div>
       <TabsPanel class="-translate-y-48 mx-4 lg:mx-auto lg:w-1/2">

@@ -1,4 +1,5 @@
 import animate from "https://esm.sh/tailwindcss-animate@1.0.7";
+import plugin from "https://esm.sh/tailwindcss/plugin";
 
 export default {
   content: [
@@ -19,5 +20,9 @@ export default {
   },
   plugins: [
     animate,
+    plugin(function ({ addVariant }) {
+      addVariant("progress-bar", ["&::-webkit-progress-bar", "&"]);
+      addVariant("progress-value", ["&::-webkit-progress-value", "&::-moz-progress-bar", "&"]);
+    }),
   ],
 };
