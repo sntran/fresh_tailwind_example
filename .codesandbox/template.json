@@ -1,0 +1,7 @@
+{
+  "title": "Fresh Tailwind Starter",
+  "description": "Deno starter that uses CodeSandbox native Docker support. Uses Fresh framework with Tailwind plugin.",
+  "iconUrl": "https://github.com/jasonjgardner/fresh_tailwind_example/tree/main/.codesandbox/icon.png?raw=true",
+  "tags": ["deno", "javascript", "typescript", "fresh", "tailwind"],
+  "published": true
+}

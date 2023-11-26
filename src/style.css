@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .inter {
+    font-family: "Inter";
+  }
+
+  .ibm-plex-mono {
+    font-family: "IBM Plex Mono";
+  }
+}
+
+@layer components {
+  .devmode {
+    @apply block fixed bottom-0 right-0 p-2 bg-gray-100 text-gray-700 text-xs rounded-tl shadow-md;
+  }
+
+  .btn {
+    @apply px-4 py-1 border-gray-200 border rounded bg-white hover:bg-gray-100 transition-colors shadow-md cursor-pointer;
+  }
+
+  .tab-panel {
+     @apply flex flex-nowrap bg-white/50 backdrop-blur-xl backdrop-filter rounded-md shadow-md p-6;
+  }
+
+  .tab-panel__panel {
+    @apply flex flex-col flex-nowrap p-4 rounded-md border border-gray-200 m-0 w-full h-full bg-white/90 text-lg;
+  }
+
+  .tab-panel__tablist {
+    @apply flex flex-col items-stretch;
+
+    &:empty + .tab-panel__panel {
+      @apply hidden
+    }
+  }
+
+  .tab-panel__tab {
+    @apply mr-4 px-4 py-2 divide-gray-400 border border-x-0 divide-y bg-white hover:bg-gray-100 transition-colors shadow-md cursor-pointer text-center font-semibold w-24;
+
+    & + & {
+      @apply border-t-0
+    }
+
+    &:first-child {
+      @apply rounded-t;
+    }
+
+    &:last-child {
+      @apply rounded-b border-t-0;
+    }
+  }
+}
+

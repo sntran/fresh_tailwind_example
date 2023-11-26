@@ -1,0 +1,35 @@
+{
+  "lock": false,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "start": "deno run --node-modules-dir -A --watch=static/,routes/,src/ dev.ts",
+    "build": "deno run --node-modules-dir -A dev.ts build",
+    "preview": "deno run --node-modules-dir -A main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"]
+    }
+  },
+  "exclude": ["**/_fresh/*"],
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.5.2/",
+    "preact": "https://esm.sh/preact@10.18.1",
+    "preact/": "https://esm.sh/preact@10.18.1/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.2",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
+    "$std/": "https://deno.land/std@0.193.0/",
+    "react": "https://esm.sh/preact@10.18.1/compat",
+    "react/": "https://esm.sh/preact@10.18.1/preact/compat/",
+    "react-dom": "https://esm.sh/preact@10.18.1/compat",
+    "@heroicons/24/outline/": "https://unpkg.com/@heroicons/react@2.0.18/24/outline/esm/",
+    "@heroicons/24/solid/": "https://unpkg.com/@heroicons/react@2.0.18/24/solid/esm/",
+    "@heroicons/20/solid/": "https://unpkg.com/@heroicons/react@2.0.18/20/solid/esm/"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  }
+}

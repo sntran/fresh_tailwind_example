@@ -1,0 +1,5 @@
+@layer test {
+    .xyz {
+        @apply text-blue-500;
+    }
+}
